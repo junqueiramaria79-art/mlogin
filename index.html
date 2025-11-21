@@ -7,21 +7,30 @@
   <style>
     body{
       margin: 0;
-       background-color: rgb(255, 202, 233);
-      color: #582d09;
-       display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #dab1b1;
     }
+    
+    .containerpai {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      margin-top: 9.8%;
+    }
+
     .container{
+    
+    
+    /* 2. O Efeito de Borrado (A propriedade principal) */
+     background-color: transparent; /* Mais clean que whitesmoke */
+    backdrop-filter: blur(20px);
+    
       
-      margin-top: 10%;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      width: 400px;
-      height: 400px;
+      width: 800px;
+      height: 600px;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       padding: 5px;
       border-radius: 30px;
@@ -49,22 +58,42 @@
       border: 1px solid #582d09;
       padding-left: 10px;
     }
+    h1{
+      color: white;
+      margin-bottom: 50px;
+    }
 
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Login</h1>
-    <div class="nome">
-      <img src="usu.png" alt="">
-      <input type="email" class="email" placeholder="Email">
-    </div>
-    <div class="senha">
-      <img src="se.png" alt="">
-      <input type="password" class="senha" placeholder="Senha">
-    </div>
-  </div>
+   <main class="container">
+            <form>
+                <h2>Faça o Login</h2>
+                <div class= "input-box">
+                    <input type="email" placeholder="E-mail" >
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+                <div class= "input-box">
+                    <input type="password" placeholder="senha">
+                    <span class="material-symbols-outlined">lock</span>
+                </div>
 
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">
+                        lembrar senha
+                    </label>
+                    <a href="#">esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="login">Login</button>
+
+                <div class="register-link">
+                    <p>Não possui uma conta? <a href="abaCadastro.html">Cadastre-se</a></p>
+                </div>
+            </form>
+
+    </main>
   
 </body>
 </html>
