@@ -6,6 +6,21 @@
   <title>Login</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+    
+    :root {
+    /* Variáveis de cores mantidas */
+    
+    --color-y: #d8608e;
+    --color-v: #e089ad;
+   
+    
+    /* Variáveis de cores do formulário (para coerência) */
+    --fundo-primario: #fdf2f8;      /* Rosa/Roxo muito suave para o fundo */
+    --rosa-principal: #F06292;      /* Rosa vibrante para destaque */
+    --marrom-escuro: #5D4037;       /* Marrom mais escuro para texto e hover */
+    --marrom-suave: #795548;        /* Marrom suave para bordas leves */
+    --sombra-principal: rgba(240, 98, 146, 0.3); /* Sombra baseada no rosa principal */
+}
 
 *{
     margin: 0;
@@ -13,13 +28,14 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url(patinhafundo.jpg);
     font-family: "Jersey 10", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: var(--fundo-primario);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 .container{
@@ -90,12 +106,12 @@ body{
     height: 50px;
     border-radius: 20px;
     font-family: "Jersey 10", sans-serif;
-    background-color: var(--color-d);
+    background-color: var(--color-v);
     color: white;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+   border: 2px solid white;
 }
 
 .login:hover {
@@ -117,6 +133,11 @@ body{
     text-decoration: underline;
 }
 
+.symbols img{
+    width: 25px;
+    height: 25px;
+}
+
 
   </style>
 </head>
@@ -125,12 +146,12 @@ body{
             <form>
                 <h2>Faça o Login</h2>
                 <div class= "input-box">
-                    <input type="email" placeholder="E-mail" >
-                    <span class="material-symbols-outlined">person</span>
+                    <input type="email" placeholder="E-mail" required >
+                    <span class="symbols"><img src="usu.png" alt="um logo de usuario"></span>
                 </div>
                 <div class= "input-box">
-                    <input type="password" placeholder="senha">
-                    <span class="material-symbols-outlined">lock</span>
+                    <input type="password" placeholder="senha" required> 
+                    <span class="symbols"><img src="se.png" alt="Um cadeado"></span>
                 </div>
 
                 <div class="remember-forgot">
